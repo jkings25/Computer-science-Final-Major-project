@@ -1,0 +1,85 @@
+
+
+query 1
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix vg:   <http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#>
+SELECT  ?Ename  ?Programminglanguage ?Scriptlanguage
+WHERE {
+ ?Engine a vg:Engine.
+?Engine vg:name ?Ename.
+?Engine vg:HasProgrammingLanguage ?programminglanguage.
+ ?programminglanguage vg:name ?Programminglanguage.
+ FILTER(REGEX(STR(?Programminglanguage),"C"))
+}
+
+
+
+Query 2
+SELECT all video games in the database that have Engines and genre with what they are and arrange table according to their engine.
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix vg:  <http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#>
+SELECT ?Videogame ?Vname ?Genre ?Engine
+WHERE {
+  ?Videogame a vg:Videogame.
+  ?Videogame vg:name ?Vname.
+  ?Videogame vg:HasGenre ?genre.
+ ?genre vg:name ?Genre.
+  ?Videogame vg:HasEngine ?engine.
+  ?engine vg:name ?Engine.
+  }
+ORDER BY ASC (?Engine)
+
+
+Query 3
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix GDO: <http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#>
+
+
+SELECT    ?game  ?Platform ?Releasedate ?Engine
+ Where{
+  ?Videogame a GDO:Videogame.
+  ?Videogame GDO:name ?game.
+  ?Videogame GDO:HasPlatform ?platform.
+  ?platform GDO:name ?Platform.
+  ?Videogame GDO:releasedate ?Releasedate.
+  FILTER(STR(?game)="MortalKombat11").
+  
+{
+    SELECT     ?Engine 
+    Where{
+      ?Videogame a GDO:Videogame.
+      ?Videogame GDO:HasEngine ?engine.
+      ?engine GDO:name ?Engine
+       }
+    ORDER BY DESC (?Engine)
+  }
+}
+LIMIT 6
+
+
+
+Query 4
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix GDO: <http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#>
+
+SELECT    ?game  ?Platform ?Releasedate ?Playermode ?voiceactor 
+ Where{
+  ?Videogame a GDO:Videogame.
+  ?Videogame GDO:name ?game.
+  ?Videogame GDO:HasPlatform ?platform.
+  ?platform GDO:name ?Platform.
+  ?Videogame GDO:releasedate ?Releasedate.
+  ?Videogame GDO:HasPlayermode ?playermode.
+    ?playermode GDO:name ?Playermode.
+  
+  OPTIONAL{?Videogame GDO:voiceactor ?voiceactor}
+}
+    LIMIT 4
+  
+
+
+
+
