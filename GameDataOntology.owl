@@ -1,0 +1,2568 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#"
+     xml:base="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:GameDataOntology="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#"
+     xmlns:untitled-ontology-59="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasAchievement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasAchievement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Achievement"/>
+        <rdfs:label>HasAchievements</rdfs:label>
+        <rdfs:label>This specifies the achievement in a game</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasArtist -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasArtist">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist"/>
+        <rdfs:comment>this shows that a game has an artist relating the artist name to the game</rdfs:comment>
+        <rdfs:label>HasArtist</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasAwards -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasAwards">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Awards"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#PersonnelAwards"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#PlatformAwards"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#VideoGameAwards"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>This specifies what award has been obtained</rdfs:comment>
+        <rdfs:label>HasAwards</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasCharacter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasCharacter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character"/>
+        <rdfs:comment>This specifies what the name of the chatcter in a videogame is</rdfs:comment>
+        <rdfs:label>HasCharacter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasComposer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasComposer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer"/>
+        <rdfs:comment>This specifies what the name of the composer is</rdfs:comment>
+        <rdfs:label>HasComposer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDesigner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDesigner">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Designer"/>
+        <rdfs:label>HasDesigner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDeveloper -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDeveloper">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer"/>
+        <rdfs:comment>This specifies what the name of the developer is</rdfs:comment>
+        <rdfs:label>HasDeveloper</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDirector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdfs:comment>This Specifies the name of the director for a game</rdfs:comment>
+        <rdfs:label>HasDirector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDistributor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasDistributor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Distributor"/>
+        <rdfs:comment>This specifies the name of the distributor</rdfs:comment>
+        <rdfs:label>HasDistributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasInGamePurchase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasInGamePurchase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#InGamePurchase"/>
+        <rdfs:comment>This specifies  the items that can be bought in game</rdfs:comment>
+        <rdfs:label>HasInGamePurchase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasItem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item"/>
+        <rdfs:comment>This property specfiies that a game has a particular item</rdfs:comment>
+        <rdfs:label>HasItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Location"/>
+        <rdfs:label>HasLocation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasProducer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasProducer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer"/>
+        <rdfs:comment>This sepcifies what the name of the producer is</rdfs:comment>
+        <rdfs:label>HasProducer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasProgrammer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasProgrammer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer"/>
+        <rdfs:comment>This specifies the name of the programmer</rdfs:comment>
+        <rdfs:label>HasProgrammer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasPublisher -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasPublisher">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher"/>
+        <rdfs:comment>This specfies what the name of the publisher is</rdfs:comment>
+        <rdfs:label>HasPublisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasWriter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#HasWriter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <rdfs:comment>This sepfies what the name of the writer is</rdfs:comment>
+        <rdfs:label>HasWriter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Hasfeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Hasfeature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Feature"/>
+        <rdfs:label>HasFeature</rdfs:label>
+        <rdfs:label>This specifies what feature an item has in a game</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Ownsitem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Ownsitem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item"/>
+        <rdfs:label>Ownitem</rdfs:label>
+        <rdfs:label>This  describes ownership of an item. An item is always owned by a certain Character. A Character can own multiple Items and this relationship is used to keep track of the character’s owned items.</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasConsole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasConsole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Home"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>This spefies what console type a game is</rdfs:comment>
+        <rdfs:label>HasConsole</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasEngine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasEngine">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <rdfs:comment>This specifies what the name of an engine is</rdfs:comment>
+        <rdfs:label>HasEngine</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasGameGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasGameGenre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <rdfs:comment>This specfies the genre for the video game</rdfs:comment>
+        <rdfs:label>HasGameGenre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasPlatform">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Andriod"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#IOS"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Linux"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SEGA"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>This sepfies what the plaform doe the video game play on</rdfs:comment>
+        <rdfs:label>HasPlatform</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasPlayermode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasPlayermode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#FirstPerson"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Muliplayer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ThirdPerson"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>This specfies the playermode for the video game</rdfs:comment>
+        <rdfs:label>HasPlayermode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasProgrammingLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasProgrammingLanguage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ProgrammingLanguage"/>
+        <rdfs:comment>This specifies the programming language used in making an engine</rdfs:comment>
+        <rdfs:label>HasProgrammingLanguage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasScriptLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HasScriptLanguage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ScriptLangauge"/>
+        <rdfs:comment>This specifies the scripting language used in the programming language</rdfs:comment>
+        <rdfs:label>HasScriptLanguage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>this shows the desciption of something</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#founded -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#founded">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>the shows the date of when something was founded like a publishing company etc</rdfs:comment>
+        <rdfs:label>founded</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ratings -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ratings">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>This is the user rating of a game</rdfs:comment>
+        <rdfs:label>ratings</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#releasedate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#releasedate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>THis shows the release date of game</rdfs:comment>
+        <rdfs:label>releasedate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#voiceactor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#voiceactor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <rdfs:comment>this shows the voice actors in a game</rdfs:comment>
+        <rdfs:label>voiceactor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Achievement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Achievement">
+        <rdfs:comment>This are the achievement gotten in the game. For example, if a player logs in every day for a week he can get an achievement or if a player finishes a game on the hardest difficulty with dying he get an achievement</rdfs:comment>
+        <rdfs:label>Achievement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Awards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Awards">
+        <rdfs:comment>This decribes the awards gotten</rdfs:comment>
+        <rdfs:label>Tournament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character">
+        <rdfs:comment>The name of the character in the game</rdfs:comment>
+        <rdfs:label>Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Feature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Feature">
+        <rdfs:comment>Feature describes an ability or characteristic. For example, describes attribute given to an item in the game.</rdfs:comment>
+        <rdfs:label>Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#InGamePurchase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#InGamePurchase">
+        <rdfs:comment>This are things a player buys in game.For exmaple, you can buy a new scorpion gear in mortal kombat. this shows what item you bought from the store and cost.</rdfs:comment>
+        <rdfs:label>Game purchase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item">
+        <rdfs:comment>An Item portrays any item that exists in a game. The item can either be just visual part of the game or a concrete usable item.</rdfs:comment>
+        <rdfs:label>Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Location">
+        <rdfs:comment>This is name of location in a game</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#PersonnelAwards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#PersonnelAwards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#PlatformAwards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#PlatformAwards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Awards"/>
+        <rdfs:comment>this are the awards gotten by platforms like xbox, ps4 etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#VideoGameAwards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#VideoGameAwards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Awards"/>
+        <rdfs:comment>this are award gotten by the video game</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Andriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Andriod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ColorTVGame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ColorTVGame">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdfs:label xml:lang="en">Colour TV-Game</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console">
+        <rdfs:comment>This shows the console that the game is played on</rdfs:comment>
+        <rdfs:label xml:lang="en">Console</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Designer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Designer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:label xml:lang="en">Designer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdfs:label xml:lang="en">Developer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:label xml:lang="en">Director</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Distributor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Distributor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdfs:label xml:lang="en">Distributor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine">
+        <rdfs:comment>This referes to the Engine used to make either a platform or videogame</rdfs:comment>
+        <rdfs:label xml:lang="en">Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm">
+        <rdfs:label xml:lang="en">Firm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#FirstPerson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#FirstPerson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <rdfs:comment>This decribes the view as game is played in as first person shooter</rdfs:comment>
+        <rdfs:label xml:lang="en">First person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Gameboy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Gameboy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Home -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Home">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#IOS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#IOS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Linux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Linux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdfs:label xml:lang="en">Linux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Muliplayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Muliplayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <rdfs:comment>This describes the playermode a game is played in as multiplayer i.e multiple people can play it at once</rdfs:comment>
+        <rdfs:label xml:lang="en">Multiplayer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdfs:label xml:lang="en">Nintendo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo3DS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo3DS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdfs:label xml:lang="en">Nintendo 3DS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo64 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo64">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdfs:label xml:lang="en">Nintendo 64</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoDS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoDS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoGameCube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoGameCube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdfs:label xml:lang="en">Nintendo Gamecube</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitchLite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitchLite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode">
+        <rdfs:comment>This section shows the way the console games are played</rdfs:comment>
+        <rdfs:label xml:lang="en">Playermode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playsation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playsation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationOne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationOne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationPortable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationPortable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationVita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationVita">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:label xml:lang="en">Producer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ProgrammingLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ProgrammingLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdfs:label xml:lang="en">Programming Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SEGA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SEGA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdfs:label xml:lang="en">SEGA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ScriptLangauge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ScriptLangauge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdfs:label xml:lang="en">Script Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdfs:label xml:lang="en">Sony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SuperNintendoEntertainmentSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SuperNintendoEntertainmentSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdfs:label xml:lang="en">Super Nintendo Entainment System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ThirdPerson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ThirdPerson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <rdfs:comment>this describes the view of the platyer in the game as a third person shooter</rdfs:comment>
+        <rdfs:label xml:lang="en">Third Person Shooter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame">
+        <rdfs:comment>This are the videogames found in the database</rdfs:comment>
+        <rdfs:label xml:lang="en">Videogame</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#VoiceActors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#VoiceActors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:label xml:lang="en">Voice Actors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Wii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Wii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#WiiU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#WiiU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdfs:label xml:lang="en">Writer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox360 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox360">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdfs:label xml:lang="en">Xbox series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeriesX -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeriesX">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#AaronContreras -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#AaronContreras">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>AaronContreras</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Artist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Artist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artist</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#AzusaKato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#AzusaKato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>AzusaKato</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#BearMcCreary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#BearMcCreary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>BearMcCreary</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#BladesOfChaos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#BladesOfChaos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item"/>
+        <untitled-ontology-59:name>BladesOfChaos</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Capcom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Capcom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <untitled-ontology-59:description>is a Japanese video game developer and publisher[4] known for creating numerous multi-million selling game franchises, including Mega Man, Darkstalkers, Street Fighter, Resident Evil, Devil May Cry, Onimusha, Dino Crisis, Dead Rising, Sengoku Basara, Ghosts &apos;n Goblins, Monster Hunter, Breath of Fire, and Ace Attorney as well as games based on Disney animated properties. Established in 1979, it has become an international enterprise with subsidiaries in North America, Europe, and Japan.</untitled-ontology-59:description>
+        <untitled-ontology-59:founded rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30051979</untitled-ontology-59:founded>
+        <untitled-ontology-59:name>Capcom</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChadCox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChadCox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer"/>
+        <untitled-ontology-59:name>ChadCox</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChoYonghee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChoYonghee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>ChoYonghee</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChrisSutton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChrisSutton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>ChrisSutton</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#CoryBarlog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#CoryBarlog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <untitled-ontology-59:name>CoryBarlog</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#DerekDaniels -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#DerekDaniels">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Designer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>DerekDaniels</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Developer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Developer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Developer</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Director -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Director">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Director</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Distrubutor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Distrubutor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Distributor"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distributor</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#DominicCianciolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#DominicCianciolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>DominicCianciolo</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EdBoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EdBoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>EdBoon</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ElectronicArts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ElectronicArts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher"/>
+        <untitled-ontology-59:name>ElectronicArts</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ElizabethDahmWang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ElizabethDahmWang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer"/>
+        <untitled-ontology-59:name>ElizabethDahmWang</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EpicGames -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EpicGames">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <untitled-ontology-59:description>EpicGames</untitled-ontology-59:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EricFong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EricFong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer"/>
+        <untitled-ontology-59:name>EricFong</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ErmacAmulet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ErmacAmulet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item"/>
+        <untitled-ontology-59:name>ErmacArmulet</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#FlorianStrauss -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#FlorianStrauss">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer"/>
+        <untitled-ontology-59:name>FlorianStrauss</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GavinFreybreg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GavinFreybreg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer"/>
+        <untitled-ontology-59:name>GavinFreyberg</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GemOfTheLiving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GemOfTheLiving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item"/>
+        <untitled-ontology-59:name>GemOfLivng</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GoAzawa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GoAzawa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer"/>
+        <untitled-ontology-59:name>GoAzawa</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GordyHaab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GordyHaab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>GordyHaab</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GraemeBayless -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GraemeBayless">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer"/>
+        <untitled-ontology-59:name>GraemeBayless</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#JiesangSong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#JiesangSong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer"/>
+        <untitled-ontology-59:name>JiesangSong</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Jill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Jill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character"/>
+        <untitled-ontology-59:name>Jill</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#JohnEdwards -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#JohnEdwards">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Designer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>JohnEdwards</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KenFeldman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KenFeldman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KiyohikoSakata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KiyohikoSakata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>KiyohikoSakata</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KotaSuzuki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KotaSuzuki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>KotaSuzuki</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Kratos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Kratos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character"/>
+        <untitled-ontology-59:name>Kratos</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Lightsaber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Lightsaber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Item"/>
+        <untitled-ontology-59:name>Lightsaber</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MannyHagopian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MannyHagopian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>MannyHagopian</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MasachikaKawata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MasachikaKawata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer"/>
+        <untitled-ontology-59:name>MasachikaKawata</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MasanoriKomine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MasanoriKomine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>MasanoriKomine</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MattMichnovetz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MattMichnovetz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>MattMichnovetz</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MattSophos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MattSophos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>MattSophos</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MeganFausti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MeganFausti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>MaganFausti</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Muspelheim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Muspelheim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Location"/>
+        <untitled-ontology-59:name>Muspelheim</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#NetherRealmStudios -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#NetherRealmStudios">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <untitled-ontology-59:description>is an American video game developer based in Chicago, Illinois, founded in May 2010 to replace Warner Bros. Interactive Entertainment&apos;s WB Games Chicago subsidiary. Led by video game industry veteran and Mortal Kombat co-creator Ed Boon, the studio is in charge of developing the Mortal Kombat and Injustice series of fighting games</untitled-ontology-59:description>
+        <untitled-ontology-59:founded rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20042010</untitled-ontology-59:founded>
+        <untitled-ontology-59:name>NetherRealmStudios</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Outworld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Outworld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Location"/>
+        <untitled-ontology-59:name>Outworld</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Programmer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Programmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Programmer"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programmer</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Publisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Publisher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publisher</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#RespawnEntertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#RespawnEntertainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <untitled-ontology-59:description>is an American video game development studio founded by Jason West and Vince Zampella. West and Zampella previously co-founded Infinity Ward and created the Call of Duty franchise, where they were responsible for its development until 2010. The studio created the Titanfall series, as well as the free-to-play battle royale game Apex Legends. Respawn was acquired by Electronic Arts on December 1, 2017, and developed Star Wars Jedi: Fallen Order, which was released in November 2019. Respawn is developing Medal of Honor: Above and Beyond.</untitled-ontology-59:description>
+        <untitled-ontology-59:founded rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12042010</untitled-ontology-59:founded>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#RichardZangrandeGaubert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#RichardZangrandeGaubert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>RichardZangrandeGaubert</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SantaMonicaStudio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SantaMonicaStudio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Developer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <untitled-ontology-59:description>is an American first-party video game developer, part of SIE Worldwide Studios developers group, and owned by Sony Interactive Entertainment, known for developing the acclaimed God of War series. It is based in Los Angeles, California and was established in 1999.</untitled-ontology-59:description>
+        <untitled-ontology-59:founded rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12091999</untitled-ontology-59:founded>
+        <untitled-ontology-59:name>Santa Monica studio</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Scorpion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Scorpion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character"/>
+        <untitled-ontology-59:name>Scorpion</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SeanLlewellyn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SeanLlewellyn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Producer"/>
+        <untitled-ontology-59:name>SeanLllewellyn</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ShawnKittelsen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ShawnKittelsen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name>ShawnKittelsen</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SonyInteractiveEntertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SonyInteractiveEntertainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher"/>
+        <untitled-ontology-59:description>is a video game and digital entertainment company wholly-owned by Japanese conglomerate Sony Corporation. SIE is made up of two companies: Sony Interactive Entertainment LLC (SIE LLC), based in San Mateo, California, United States, and Sony Interactive Entertainment Inc. (SIE Inc.), based in Minato, Tokyo, Japan.[2] Tokyo-based SIE Inc. was originally founded as Sony Computer Entertainment Inc. (SCEI or SCE) in November 1993 to handle Sony&apos;s venture into video game development for the PlayStation systems.[2] SIE LLC was established in San Mateo in April 2016[2] and is managed through Sony&apos;s American hub, Sony Corporation of America.
+Since the launch of the original PlayStation console in 1994, the company has been developing PlayStation home video game consoles, accessories and services lineup. The company expanded from Japan into North America and Europe, where it founded the branches Sony Computer Entertainment America (SCEA) in May 1995 (in Foster City, California) and Sony Computer Entertainment Europe (SCEE) in July 1995 (in Liverpool). The company quickly became Sony&apos;s main resource for research and development in video games and interactive entertainment. In April 2016, SCE and Sony Network Entertainment International was restructured and reorganized into Sony Interactive Entertainment, carrying over the operations and primary objectives from both companies. The same year, SIE LLC was established, with its headquarters in San Mateo, California.
+Sony Interactive Entertainment handles the research and development, production, and sales of both hardware and software for the PlayStation video game systems. SIE is also a developer and publisher of video game titles, and operates several subsidiaries in Sony&apos;s largest markets: North America, Europe and Asia. By August 2018, the company had sold more than 525 million PlayStation consoles worldwide</untitled-ontology-59:description>
+        <untitled-ontology-59:founded rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16111993</untitled-ontology-59:founded>
+        <untitled-ontology-59:name>SonyInteractiveEntertainment</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SoulChamber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SoulChamber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Location"/>
+        <untitled-ontology-59:name>SoulChamber</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Startrooper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Startrooper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character"/>
+        <untitled-ontology-59:name>Startrooper</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#StephenBarton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#StephenBarton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>StephenBarton</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SteveBeran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SteveBeran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>SteveBeran</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#StigAsmussen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#StigAsmussen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>StigAsmussen</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SubZero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SubZero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Character"/>
+        <untitled-ontology-59:name>SubZero</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#WarnerBros.InteractiveEntertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#WarnerBros.InteractiveEntertainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Publisher"/>
+        <untitled-ontology-59:description>is the video game division of Warner Bros. Home Entertainment. Founded in January 2004, it wholly owns studios TT Games, Rocksteady Studios, NetherRealm Studios, Monolith Productions, WB Games Boston, Avalanche Software, WB Games Montréal, and WB Games San Francisco</untitled-ontology-59:description>
+        <untitled-ontology-59:name>WarnerBros.InteractiveEntertainment</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#WilbertRoget -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#WilbertRoget">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Composer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>WilbertRoget</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Writer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Writer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Writer"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Writer</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YasuhiroAnpo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YasuhiroAnpo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>YasuhiroAnpo</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YasuhiroSeto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YasuhiroSeto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>YasuhiroSeto</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YukaChi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YukaChi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Artist"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>YukaChi</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YukioAndo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YukioAndo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <untitled-ontology-59:name>YukioAndo</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#BattleRoyle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#BattleRoyle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>BattleRoyale</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Engine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Engine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name>Engine</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Fighting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Fighting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>Fighting</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Javascript -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Javascript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ScriptLangauge"/>
+        <untitled-ontology-59:name>Javacript</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#ProgrammingLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#ProgrammingLanguage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ProgrammingLanguage"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProgramingLanguage</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Sandbox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Sandbox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>Sandbox</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#ScirptingLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#ScirptingLanguage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ScriptLangauge"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ScriptLanguage</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Action -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Action">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>Action</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Action-adventure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Action-adventure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>Action-adventure</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#AmazonLumberyard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#AmazonLumberyard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name>AmazonLumberyard</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Andriod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Andriod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Andriod"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <untitled-ontology-59:name>Andriod</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#AngelScript -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#AngelScript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ScriptLangauge"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AngelScript</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Awards -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Awards">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Firm"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awards</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Coco2d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Coco2d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name>Coco2d</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Construct -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Construct">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:HasProgrammingLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Cplusplus"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Construct</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Cplusplus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Cplusplus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ProgrammingLanguage"/>
+        <untitled-ontology-59:HasScriptLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#AngelScript"/>
+        <untitled-ontology-59:name>Cplusplus</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Csharp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Csharp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ProgrammingLanguage"/>
+        <untitled-ontology-59:name>Csharp</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#EsenthelEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#EsenthelEngine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name>EsenthelEngine</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#FirstPersonShooter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#FirstPersonShooter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#FirstPerson"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <untitled-ontology-59:name>FirstPersonShooter</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GameMaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GameMaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name>GameMaker</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Gameboy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Gameboy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Gameboy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <untitled-ontology-59:name>Gameboy</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>Genre</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GodOfWar4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GodOfWar4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <HasCharacter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Kratos"/>
+        <HasComposer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#BearMcCreary"/>
+        <HasDesigner rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#DerekDaniels"/>
+        <HasDeveloper rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SantaMonicaStudio"/>
+        <HasItem rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#BladesOfChaos"/>
+        <HasProducer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChadCox"/>
+        <HasProducer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ElizabethDahmWang"/>
+        <HasProducer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EricFong"/>
+        <HasProducer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SeanLlewellyn"/>
+        <HasProgrammer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#FlorianStrauss"/>
+        <HasPublisher rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SonyInteractiveEntertainment"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#CoryBarlog"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MattSophos"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#RichardZangrandeGaubert"/>
+        <untitled-ontology-59:HasEngine rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SantaMonicaEngine"/>
+        <untitled-ontology-59:HasGameGenre rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Action-adventure"/>
+        <untitled-ontology-59:HasGameGenre rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HackandSlash"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4"/>
+        <untitled-ontology-59:HasPlayermode rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer"/>
+        <untitled-ontology-59:HasPlayermode rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ThirdPersonShooter"/>
+        <untitled-ontology-59:description>It is a new beginning for Kratos. Living as a man outside the shadow of the gods, he ventures into the brutal Norse wilds with his son Atreus, fighting to fulfill a deeply personal quest.
+His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… And teach his son to do the same. This startling reimagining of God of War deconstructs the core elements that defined the series—satisfying combat; breathtaking scale; and a powerful narrative—and fuses them anew.
+Kratos is a father again. As mentor and protector to Atreus, a son determined to earn his respect, he is forced to deal with and control the rage that has long defined him while out in a very dangerous world with his son.
+From the marble and columns of ornate Olympus to the gritty forests, mountains, and caves of Pre-Viking Norse lore, this is a distinctly new realm with its own pantheon of creatures, monsters, and gods. With an added emphasis on discovery and exploration, the world will draw players in to explore every inch of God of War’s breathtakingly threatening landscape—by far the largest in the franchise.
+With an over the shoulder free camera that brings the player closer to the action than ever before, fights in God of War mirror the pantheon of Norse creatures Kratos will face: grand, gritty, and grueling. A new main weapon and new abilities retain the defining spirit of God of War while presenting a vision of violent conflict that forges new ground in the genre.</untitled-ontology-59:description>
+        <untitled-ontology-59:name>GodOfWar4</untitled-ontology-59:name>
+        <untitled-ontology-59:releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20042018</untitled-ontology-59:releasedate>
+        <untitled-ontology-59:voiceactor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher Judge = Kratos
+Atreus = Sunny Sujic
+Mimir = Alastair Duncan</untitled-ontology-59:voiceactor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Godot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Godot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name>Godot</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <untitled-ontology-59:name>GoogleStadia</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HPLEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HPLEngine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:HasProgrammingLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Cplusplus"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HPLEngine</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HTML5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HTML5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTML5</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HackandSlash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#HackandSlash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HackandSlash</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld"/>
+        <untitled-ontology-59:name>Handheld</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Home -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Home">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Home"/>
+        <untitled-ontology-59:name>Home</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Horror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Horror">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>Horror</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Console"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid"/>
+        <untitled-ontology-59:name>Hybrid</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#IOS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#IOS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#IOS"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <untitled-ontology-59:name>IOS</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Lua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Lua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ScriptLangauge"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lua</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#MortalKombat11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#MortalKombat11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SteveBeran"/>
+        <HasCharacter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Scorpion"/>
+        <HasCharacter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SubZero"/>
+        <HasComposer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#WilbertRoget"/>
+        <HasDesigner rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#JohnEdwards"/>
+        <HasDeveloper rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#NetherRealmStudios"/>
+        <HasDirector rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EdBoon"/>
+        <HasItem rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ErmacAmulet"/>
+        <HasItem rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#SoulChamber"/>
+        <HasProducer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GraemeBayless"/>
+        <HasProgrammer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GavinFreybreg"/>
+        <HasPublisher rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#WarnerBros.InteractiveEntertainment"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#DominicCianciolo"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ShawnKittelsen"/>
+        <untitled-ontology-59:HasEngine rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealEngine3"/>
+        <untitled-ontology-59:HasGameGenre rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/VideoGameOntology#Fighting"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NIntendoswitchLite"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitch"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne"/>
+        <untitled-ontology-59:HasPlayermode rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#MultiPlayer"/>
+        <untitled-ontology-59:HasPlayermode rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer"/>
+        <untitled-ontology-59:description>Mortal Kombat is back and better than ever in the next evolution of the iconic franchise. The all new Custom Character Variations give you unprecedented control to customize the fighters and make them your own. The new graphics engine showcasing every skull-shattering, eye-popping moment, brings you so close to the fight you can feel it. And featuring a roster of new and returning Klassic Fighters, Mortal Kombat&apos;s best in class cinematic story mode continues the epic saga over 25 years in the making.</untitled-ontology-59:description>
+        <untitled-ontology-59:name>MortalKombat11</untitled-ontology-59:name>
+        <untitled-ontology-59:releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23042019</untitled-ontology-59:releasedate>
+        <untitled-ontology-59:voiceactor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ike Amadi = ShaoKahn/Cyrax
+Ronda Rousey = SonyaBlade
+Kari Wahlgren = Kitana</untitled-ontology-59:voiceactor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#MultiPlayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#MultiPlayer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Muliplayer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <untitled-ontology-59:name>MultiPlayer</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NIntendoswitchLite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NIntendoswitchLite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitchLite"/>
+        <untitled-ontology-59:HasConsole rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld"/>
+        <untitled-ontology-59:name>NintendoSwitchLite</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitch"/>
+        <untitled-ontology-59:HasConsole rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid"/>
+        <untitled-ontology-59:name>NintendoSwitch</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PC</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playsation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>Playstation</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation2"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>Playstation2</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation3"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>Playstation3</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>Playstation4</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation5"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>Playstation5</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationOne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationOne"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>PlaystaionOne</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationPortable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationPortable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationPortable"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>PlaystaionPortbale</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationVita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationVita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PlaystationVita"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Sony"/>
+        <untitled-ontology-59:name>PlaystationVita</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#REEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#REEngine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:HasProgrammingLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Cplusplus"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REEngine</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ResidentEvil3Remake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ResidentEvil3Remake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChoYonghee"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChrisSutton"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KenFeldman"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YukaChi"/>
+        <HasCharacter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Jill"/>
+        <HasComposer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#AzusaKato"/>
+        <HasComposer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KotaSuzuki"/>
+        <HasDesigner rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MasanoriKomine"/>
+        <HasDeveloper rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Capcom"/>
+        <HasDirector rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KiyohikoSakata"/>
+        <HasDirector rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YasuhiroAnpo"/>
+        <HasDirector rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YasuhiroSeto"/>
+        <HasDirector rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#YukioAndo"/>
+        <HasProducer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MasachikaKawata"/>
+        <HasProgrammer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GoAzawa"/>
+        <HasPublisher rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Capcom"/>
+        <untitled-ontology-59:HasGameGenre rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Horror"/>
+        <untitled-ontology-59:HasGameGenre rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Survival"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#MultiPlayer"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne"/>
+        <untitled-ontology-59:HasProgrammingLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#REEngine"/>
+        <untitled-ontology-59:description xml:lang="en">Taking a trip back to Raccoon City won’t be a walk in the park, of course. The city is in the throes of an outbreak, with the shuffling undead wandering the streets and the urban jungle becoming a tangle of overturned cars and crumbling buildings. Picturesque, isn’t it? It’s against this backdrop that Jill Valentine prepares to make her escape, though there’s a bit of a twist in the timeline for those of you who aren’t familiar with the original. If you played Resident Evil 2 earlier this year, you may know that Leon and Claire arrived in the city on September 29th. Jill’s story, however, starts a few days earlier. As an accomplished member of S.T.A.R.S. and a survivor of the incident in the Arklay Mountains (the site of the original Resident Evil), Jill has some experience with the horrors that await.</untitled-ontology-59:description>
+        <untitled-ontology-59:name>ResidentEvil3Remake</untitled-ontology-59:name>
+        <untitled-ontology-59:releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3042020</untitled-ontology-59:releasedate>
+        <untitled-ontology-59:voiceactor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicole Tompkins = Jill Valentine
+William Hope = Nathanial Bard/ Mikhail Victor</untitled-ontology-59:voiceactor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SantaMonicaEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SantaMonicaEngine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SantaMonicaEngine</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer"/>
+        <untitled-ontology-59:name>SinglePlayer</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Survival -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Survival">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre"/>
+        <untitled-ontology-59:name>Survival</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ThirdPersonShooter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ThirdPersonShooter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playermode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ThirdPerson"/>
+        <untitled-ontology-59:name>ThirdPersonShooter</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Unity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Unity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:HasProgrammingLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Csharp"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unity</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Unity3D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Unity3D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unity3D</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealEngine3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealEngine3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <HasDeveloper rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EpicGames"/>
+        <untitled-ontology-59:HasProgrammingLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealScript"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnrealEngine3</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealEngine4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealEngine4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Engine"/>
+        <HasDeveloper rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#EpicGames"/>
+        <untitled-ontology-59:HasProgrammingLanguage rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Cplusplus"/>
+        <untitled-ontology-59:description>Development on Unreal Engine 4 began in 2003, according to Mark Rein, the vice-president of Epic Games. In early 2008, Sweeney revealed in an interview that he was basically the only person working on the engine, although he stated the research and development team would expand over time, designing the engine in parallel with the efforts by the UE3 team. In February 2012, Rein said &quot;people are going to be shocked later this year when they see Unreal Engine 4&quot;;Epic unveiled UE4 to limited attendees at the 2012 Game Developers Conference,[69] and a video of the engine being demonstrated by technical artist Alan Willard was released to the public on June 7, 2012, via GameTrailers TV.</untitled-ontology-59:description>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnrealEngine4</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealScript -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#UnrealScript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#ProgrammingLanguage"/>
+        <untitled-ontology-59:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnrealScript</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Vioceactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Vioceactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Personnel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#VoiceActors"/>
+        <untitled-ontology-59:name>VoiceActor</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Wii -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Wii">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Wii"/>
+        <untitled-ontology-59:name>Wii</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#WiiU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#WiiU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Nintendo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#WiiU"/>
+        <untitled-ontology-59:name>WiiU</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+        <untitled-ontology-59:name>Xbox</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox360 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox360">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox360"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+        <untitled-ontology-59:name>Xbox360</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+        <untitled-ontology-59:name>XboxOne</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeriesX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeriesX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeries"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeriesX"/>
+        <untitled-ontology-59:name>XboxSeriesX</untitled-ontology-59:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#StarWarsJedi:FallenOrder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#StarWarsJedi:FallenOrder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Videogame"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ChrisSutton"/>
+        <HasArtist rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#KenFeldman"/>
+        <HasCharacter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Startrooper"/>
+        <HasComposer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#GordyHaab"/>
+        <HasComposer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#StephenBarton"/>
+        <HasDeveloper rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#RespawnEntertainment"/>
+        <HasItem rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#Lightsaber"/>
+        <HasProgrammer rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#JiesangSong"/>
+        <HasPublisher rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#ElectronicArts"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#AaronContreras"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MannyHagopian"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MattMichnovetz"/>
+        <HasWriter rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/GameDataOntology#MeganFausti"/>
+        <untitled-ontology-59:HasGameGenre rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Action-adventure"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Playstation4"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer"/>
+        <untitled-ontology-59:HasPlatform rdf:resource="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne"/>
+        <untitled-ontology-59:description>Cal Kestis—one of the last surviving members of the Jedi Order after the purge of Order 66—is now a Padawan on the run. Star Wars Jedi: Fallen Order is an action-adventure game set after Star Wars: Episode III — Revenge of the Sith™. Develop your Force abilities, hone your lightsaber techniques, and explore the ancient mysteries of a long-lost civilization—all while staying one step ahead of the Empire and its deadly Inquisitors</untitled-ontology-59:description>
+        <untitled-ontology-59:name>StarWarsJedi:FallenOrder</untitled-ontology-59:name>
+        <untitled-ontology-59:releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15092019</untitled-ontology-59:releasedate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Andriod">
+        <rdfs:label xml:lang="en">Andriod</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Gameboy">
+        <rdfs:label xml:lang="en">Gameboy</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Genre">
+        <rdfs:comment>The genre of the game</rdfs:comment>
+        <rdfs:label xml:lang="en">Genre</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#GoogleStadia">
+        <rdfs:label xml:lang="en">Google Stadia</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Handheld">
+        <rdfs:label xml:lang="en">Handheld</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Home">
+        <rdfs:label xml:lang="en">Home</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Hybrid">
+        <rdfs:label xml:lang="en">Hybrid</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#IOS">
+        <rdfs:label xml:lang="en">IOS</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#NintendoSwitch">
+        <rdfs:label xml:lang="en">Nintendo Switch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#PC">
+        <rdfs:label xml:lang="en">PC</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Platforms">
+        <rdfs:label xml:lang="en">Platforms</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#SinglePlayer">
+        <rdfs:label xml:lang="en">Single Player</rdfs:label>
+        <rdfs:comment>This descibes the playermode of a game as single player i.e only a single person can play it</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Wii">
+        <rdfs:label xml:lang="en">Wii</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#WiiU">
+        <rdfs:label xml:lang="en">WiiU</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox">
+        <rdfs:label xml:lang="en">Xbox</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#Xbox360">
+        <rdfs:label xml:lang="en">Xbox360</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxOne">
+        <rdfs:label xml:lang="en">XboxOne</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kings/ontologies/2020/4/untitled-ontology-59#XboxSeriesX">
+        <rdfs:label xml:lang="en">XboxSeriesX</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
